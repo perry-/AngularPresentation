@@ -96,7 +96,8 @@ section .fullsize > img {
 }
 
 .resource{ 
-  height: 250px; 
+  height: 400px; 
+  padding: 1em;
   margin: auto;  
 }
 
