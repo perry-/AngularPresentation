@@ -105,6 +105,22 @@ section .fullsize > img {
 	color: white;
 }
 
+.example{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+  	justify-content: space-around;
+}
+
+.html .view .js{
+	/*width: 30%;*/
+}
+
+.examplecode{
+	height: 2em;
+	width: 10em;
+	font-size: 30px;
+}
 
 /*********************************************
  * HEADERS
