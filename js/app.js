@@ -17,7 +17,8 @@ presentation.controller('forEachCtrl', function($scope) {
 
 presentation.controller('filterCtrl', function($scope) {
   $scope.title = "Filter";
- 
+}); 
+
 presentation.controller('slide', function ($scope) {
   $scope.phones = [
     {'name': 'Nexus S',
