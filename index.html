@@ -48,15 +48,33 @@
 					</aside>
 				</section>
 
-				<section>
-					<h2>Hvorfor?</h2>
+				<section ng-controller="slide1" data-background="{{background}}">
+					<h2>{{title}}</h2>
+					<input ng-model="locale">
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
-				<section>
-					<h2>Hva er AngularJS?</h2>
+				<section ng-controller="slide">
+					<h2>Filter</h2>
+					<div ng-init="friends = [{name:'John', phone:'555-1276'},
+                           {name:'Mary', phone:'800-BIG-MARY'},
+                           {name:'Mike', phone:'555-4321'},
+                           {name:'Adam', phone:'555-5678'},
+                           {name:'Julie', phone:'555-8765'},
+                           {name:'Juliette', phone:'555-5678'}]"></div>
+                           
+                    Search: <input ng-model="searchText">
+                    <table id="searchTextResults">
+					    <tr><th>Name</th><th>Phone</th></tr>
+					    <tr ng-repeat="friend in friends | filter:searchText">
+					      <td>{{friend.name}}</td>
+					      <td>{{friend.phone}}</td>
+					    </tr>
+					  </table>
+
+
 					<aside class="notes">
 						Notater blabla
 					</aside>
