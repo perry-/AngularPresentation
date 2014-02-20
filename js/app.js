@@ -5,7 +5,7 @@ presentation.controller('bindingCtrl', function($scope) {
 });
 
 presentation.controller('forEachCtrl', function($scope) {
-	$scope.title = "For each";
+	$scope.title = "ngRepeat";
 
 	$scope.orders = [
         {'OrderId': 5200902, 'OrderName': 'Physical treatment'},
@@ -19,18 +19,7 @@ presentation.controller('filterCtrl', function($scope) {
   $scope.title = "Filter";
 }); 
 
-presentation.controller('slide', function ($scope) {
-  $scope.phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
-});
-
-presentation.controller('slide1', function ($scope, $locale) {
+presentation.controller('localeCtrl', function($scope, $locale) {
 	$scope.background = "Norway.svg";
 	$scope.title = "Internasjonalisering";
 

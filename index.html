@@ -48,36 +48,44 @@
 					</aside>
 				</section>
 
-				<section ng-controller="slide1" data-background="{{background}}">
-					<h2>{{title}}</h2>
-					<input ng-model="locale">
+				<section>
+					<h2>Historikk</h2>
+					<p>Startet av Google</p>
+					<p>"Angular" == &gt;</p>
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
-				<section ng-controller="slide">
-					<h2>Filter</h2>
-					<div ng-init="friends = [{name:'John', phone:'555-1276'},
-                           {name:'Mary', phone:'800-BIG-MARY'},
-                           {name:'Mike', phone:'555-4321'},
-                           {name:'Adam', phone:'555-5678'},
-                           {name:'Julie', phone:'555-8765'},
-                           {name:'Juliette', phone:'555-5678'}]"></div>
-                           
-                    Search: <input ng-model="searchText">
-                    <table id="searchTextResults">
-					    <tr><th>Name</th><th>Phone</th></tr>
-					    <tr ng-repeat="friend in friends | filter:searchText">
-					      <td>{{friend.name}}</td>
-					      <td>{{friend.phone}}</td>
-					    </tr>
-					  </table>
-
-
+				<section>
+					<h2>Hvorfor</h2>
+					
 					<aside class="notes">
 						Notater blabla
 					</aside>
+				</section>
+
+				<section>
+					<h2>Model View Whatever</h2>
+					
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h2>Templating</h2>
+					
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<section>
+					<img src="AngularJS.svg" />
+					<h2>I praksis</h2>
+				</section>
 				</section>
 
 				<section>
@@ -89,7 +97,8 @@
 				</section>
 
 				<section>
-					<h1>Demo</h1>
+					<h2>HTML + AngularJS</h2>
+					<p>ng-app, ng-controller</p>
 					<aside class="notes">
 						Notater blabla
 					</aside>
@@ -100,45 +109,107 @@
 					<div class="example">
 						<input class="examplecode" ng-model="title">
 					</div>
+					<input type="number" ng-model="hours1">
+					<input type="number" ng-model="hours2">
+					Sum: {{hours1+hours2}}
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
-				<section ng-controller="forEachCtrl">
-					<h2>{{title}}</h2>
-					<div>
-						<div>
-							<iframe width="100%" height="300" src="http://jsfiddle.net/BY24y/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-							<!--pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-									<table>
-										<tr data-ng-repeat="order in orders">
-											<td>{{order.OrderId}}</td>
-											<td>{{order.OrderName}}</td>
-										</tr>
-									</table>
-								</code>
-							</pre>-->
-						</div>
-					</div>
-					
-					<aside class="notes">
-						Notater blabla
-					</aside>
-				</section>
-
-				<section ng-controller="filterCtrl">
+				<section ng-controller="bindingCtrl">
 					<h2 class="exampleresult">{{title}}</h2>
-					<ul>
-						<li>En</li>
-						<li>To</li>
-						<li>Tre</li>
-					</ul>
+					<p>Info</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
 
-					<div class="example">
-						<input class="examplecode" ng-model="title">
-					</div>
+				<section>
+					<h2>Ng-Repeat</h2>
+					<p>Info</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
 
+				<section>
+					<h2>Ng-Repeat</h2>
+					<p>Syntaks</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+
+					<aside class="notes">
+						<p>NgRepeat demo</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Filter</h2>
+					<p>Info</p>
+					<p>Syntaks</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h2>Filter</h2>
+					<p>Syntaks</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+
+					<aside class="notes">
+						<p>Filter demo</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>i18n, l10n</h2>
+					<p>Info</p>
+					<p>Syntaks</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h2>i18n, l10n</h2>
+					<p>Syntaks</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+
+					<aside class="notes">
+						<p>Filter demo</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Routing</h2>
+					<p>Info</p>
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h2>Routing</h2>
+					<p>Syntaks</p>
 					<aside class="notes">
 						Notater blabla
 					</aside>
@@ -154,14 +225,47 @@
 					</div>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+				<!--
+				<section ng-controller="forEachCtrl">
+					<h2>{{title}}</h2>
+					<div ng-init="orders = [
+						        {'OrderId': 5200902, 'OrderName':'Physical treatment'},
+								{'OrderId': 5200903, 'OrderName': 'Dentist appointment'},
+								{'OrderId': 5200904, 'OrderName': 'Sick children'}]"></div>
+					
+					<table>
+					    <tr><th>ID</th><th>Beskrivelse</th></tr>
+					    <tr ng-repeat="order in orders">
+					      <td>{{order.OrderId}}</td>
+					      <td>{{order.OrderName}}</td>
+					    </tr>
+					 </table>
+
+					<aside class="notes">
+						Genererer repeterende HTML markup med for-løkke
+					</aside>
+				</section>
+
+				<section ng-controller="filterCtrl">
+					<h2>{{title}}</h2>
+					<div ng-init="orders = [
+						        {'OrderId': 5200902, 'OrderName':'Physical treatment'},
+								{'OrderId': 5200903, 'OrderName': 'Dentist appointment'},
+								{'OrderId': 5200904, 'OrderName': 'Sick children'}]"></div>
+                           
+                    Søk: <input ng-model="searchText">
+
+                    <table id="searchTextResults">
+					    <tr><th>ID</th><th>Beskrivelse</th></tr>
+					    <tr ng-repeat="order in orders | filter:searchText">
+					      <td>{{order.OrderId}}</td>
+					      <td>{{order.OrderName}}</td>
+					    </tr>
+					  </table>
+
+					<aside class="notes">
+						Notater blabla
+					</aside>
 				</section>
 
 				<section id="transitions">
@@ -322,15 +426,9 @@ function linkify( selector ) {
 						<p class="fragment highlight-blue">highlight-blue</p>
 						<p class="fragment current-visible">current-visible</p>
 						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
+					</section>-->
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
 				
 			</div>
 			<div class="footer">
