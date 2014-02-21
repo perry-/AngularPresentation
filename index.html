@@ -44,7 +44,9 @@
 				<section>
 					<h2>Intro</h2>
 					<aside class="notes">
-						Notater blabla
+						Foredraget er en introduksjon i grunnleggende elementer i AngularJS
+						</br>
+						Man blir ingen ekspert i AngularJS etter det
 					</aside>
 				</section>
 
@@ -53,13 +55,21 @@
 					<p>Startet av Google</p>
 					<p>"Angular" == &gt;</p>
 					<aside class="notes">
-						Notater blabla
+						
 					</aside>
 				</section>
 
 				<section>
 					<h2>Hvorfor</h2>
 					
+					<aside class="notes">
+						Notater blabla
+					</aside>
+				</section>
+
+				<section>
+					<h2>Dynamisk web</h2>
+					<p>Knockout.js, EmberJS, AngularJS, BackboneJS</p>
 					<aside class="notes">
 						Notater blabla
 					</aside>
@@ -74,7 +84,7 @@
 				</section>
 
 				<section>
-					<h2>Templating</h2>
+					<h2>Scope</h2>
 					
 					<aside class="notes">
 						Notater blabla
@@ -90,54 +100,114 @@
 
 				<section>
 					<h2>Statisk HTML</h2>
-					<p>Sett inn eksempel med statisk HTML her</p>
+					<pre><code data-trim contenteditable>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Eksempel&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
 				<section>
-					<h2>HTML + AngularJS</h2>
-					<p>ng-app, ng-controller</p>
+					<h2>Bootstrapping</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;html data-ng-app&gt;
+  &lt;head&gt;
+    &lt;title&gt;Eksempel&lt;/title&gt;
+    &lt;script src="/Scripts/angular.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{5+5}}
+  &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 					<aside class="notes">
-						Notater blabla
+						Legger til ng-app-attributt for å referere til en applikasjon
+						</br>
+						ng-controller refererer til en kontroller
+						</br>
+						Begge disse defineres i en javascript-fil, her i app.js
 					</aside>
 				</section>
 
 				<section ng-controller="bindingCtrl">
-					<h2 class="exampleresult">{{title}}</h2>
+					<h2>{{title}}</h2>
+					<img src="One_Way_Data_Binding.png"/>
+					<img src="Two_Way_Data_Binding.png"/>
+					<aside class="notes">
+						Tradisjonell templating på venstre side
+						</br>
+						Two way binding på høyre side
+					</aside>
+				</section>
+
+				<section ng-controller="bindingCtrl">
+					<h2>{{title}}</h2>
 					<div class="example">
-						<input class="examplecode" ng-model="title">
+						<input class="examplecode" placeholder="Skriv inn ny tittel" ng-model="title">
 					</div>
-					<input type="number" ng-model="hours1">
-					<input type="number" ng-model="hours2">
-					Sum: {{hours1+hours2}}
+
+					<input class="numberField" type="number" ng-model="hours1">
+					+
+					<input class="numberField" type="number" ng-model="hours2">
+					= {{hours1+hours2}}
 					<aside class="notes">
-						Notater blabla
+						Her har vi to eksempler på Two Way Binding.
 					</aside>
 				</section>
 
 				<section ng-controller="bindingCtrl">
-					<h2 class="exampleresult">{{title}}</h2>
-					<p>Info</p>
+					<h2>{{title}}</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;h2&gt;{{title}}&lt;/h2&gt;
+&lt;input ng-model=&quot;title&quot;&gt;
+
+&lt;input type=&quot;number&quot; ng-model=&quot;numb1&quot;&gt;
++
+&lt;input type=&quot;number&quot; ng-model=&quot;numb2&quot;&gt;
+= {{numb1+numb2}}
+					</code></pre>
+					<aside class="notes">
+						Forklar ng-model, kan prefikses med "data-"
+						</br>
+						Overskriften settes ikke til input fra forrige slide, annet scope
+					</aside>
+				</section>
+
+				<section ng-controller="ngRepeatCtrl">
+					<h2>{{title}}</h2>
+					
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
-				<section>
-					<h2>Ng-Repeat</h2>
-					<p>Info</p>
+				<section ng-controller="ngRepeatCtrl">
+					<h2>{{title}}</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Project Id&lt;/td&gt;
+      &lt;td&gt;Project Name&lt;/td&gt;
+    &lt;tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr data-ng-repeat=&quot;order in orders&quot;&gt;
+      &lt;td&gt;{{order.ProjectId}}&lt;/td&gt;
+      &lt;td&gt;{{order.ProjectName}}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+					</code></pre>
 					<aside class="notes">
-						Notater blabla
-					</aside>
-				</section>
-
-				<section>
-					<h2>Ng-Repeat</h2>
-					<p>Syntaks</p>
-					<aside class="notes">
-						Notater blabla
+						Vi har jukset litt, og generert et array med ordre.
 					</aside>
 				</section>
 
@@ -145,28 +215,42 @@
 					<h1>Demo</h1>
 
 					<aside class="notes">
-						<p>NgRepeat demo</p>
+						<p>Ng-Repeat demo</p>
 					</aside>
 				</section>
 
-				<section>
-					<h2>Filter</h2>
+				<section ng-controller="filterCtrl">
+					<h2>{{title}}</h2>
 					<p>Info</p>
-					<p>Syntaks</p>
 					<aside class="notes">
 						Notater blabla
 					</aside>
 				</section>
 
-				<section>
-					<h2>Filter</h2>
-					<p>Syntaks</p>
+				<section ng-controller="filterCtrl">
+					<h2>{{title}}</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Project Id&lt;/td&gt;
+      &lt;td&gt;Project Name&lt;/td&gt;
+    &lt;tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr data-ng-repeat=&quot;order in orders&quot; | filter:"Time off in lieu" &gt;
+      &lt;td&gt;{{order.ProjectId}}&lt;/td&gt;
+      &lt;td&gt;{{order.ProjectName}}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+					</code></pre>
 					<aside class="notes">
-						Notater blabla
+						Vi har jukset litt, og generert et array med ordre.
 					</aside>
 				</section>
 
-				<section>
+				<section>			
 					<h1>Demo</h1>
 
 					<aside class="notes">
@@ -177,9 +261,12 @@
 				<section>
 					<h2>i18n, l10n</h2>
 					<p>Info</p>
-					<p>Syntaks</p>
 					<aside class="notes">
-						Notater blabla
+						i18n = internationalization
+						</br>
+						l10n = localization
+						</br>
+						http://docs.angularjs.org/guide/i18n
 					</aside>
 				</section>
 
@@ -209,7 +296,25 @@
 
 				<section>
 					<h2>Routing</h2>
-					<p>Syntaks</p>
+<pre><code data-trim contenteditable data-ng-non-bindable>
+var app = angular.module('NgESS', ['NgESSFilters','ngRoute']);
+
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/ng-repeat', {
+        templateUrl: 'partials/ngrepeat.html',
+        controller: 'orderCtrl'
+      }).
+	  when('/filter', {
+        templateUrl: 'partials/filter.html',
+        controller: 'orderCtrl'
+      }).
+      otherwise({
+        redirectTo: '/'
+      });
+  }]);
+  </code></pre>
 					<aside class="notes">
 						Notater blabla
 					</aside>

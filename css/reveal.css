@@ -96,7 +96,7 @@ section .fullsize > img {
 }
 
 .resource{ 
-  height: 400px; 
+  width: 20%; 
   padding: 1em;
   margin: auto;  
 }
@@ -112,14 +112,16 @@ section .fullsize > img {
   	justify-content: space-around;
 }
 
-.html .view .js{
-	/*width: 30%;*/
-}
-
 .examplecode{
 	height: 2em;
 	width: 10em;
 	font-size: 30px;
+}
+
+.numberField{
+	margin-top: 2em;
+	width: 2em;
+	font-size: 40px;
 }
 
 /*********************************************
