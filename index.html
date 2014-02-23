@@ -39,10 +39,6 @@
 				<section>
 					<img src="AngularJS.svg" />
 					<h3>En introduksjon</h3>
-				</section>
-
-				<section>
-					<h2>Intro</h2>
 					<aside class="notes">
 						Foredraget er en introduksjon i grunnleggende elementer i AngularJS
 						</br>
@@ -52,18 +48,28 @@
 
 				<section>
 					<h2>Historikk</h2>
-					<p>Startet av Google</p>
+					<p>Google</p>
+					<p>2009</p>
 					<p>"Angular" == &gt;</p>
 					<aside class="notes">
-						
+						<p>Startet av Google i 2009</p>
+						<p>Navnet kommer av bruken av angular brackets i HTML og at det er et JS-rammeverk</p>
 					</aside>
 				</section>
 
 				<section>
 					<h2>Hvorfor</h2>
-					
+					<p>Single Page Applications</p>
+					<p>Embeddable</p>
+					<p>Injectable</p>
+					<p>Testable</p>
 					<aside class="notes">
-						Notater blabla
+						<p>Brukes for å lage single page applications</p>
+						<p>Web side = vanligvis informasjonskilde, lite interaksjon (ciber.no)</p>
+						<p>Web app = avhenger av interaksjon med brukere (timeføring/ESS)</p>
+						<p>Embeddable = kan legge til flere AJS apps hvor som helst i markup</p>
+						<p>Injectable = dependency injection er kjernen, utbyttbare komponenter</p>
+						<p>Testable = bygd for å være testbart, tett integrasjon med testrammeverk</p>
 					</aside>
 				</section>
 
@@ -71,31 +77,41 @@
 					<h2>Dynamisk web</h2>
 					<p>Knockout.js, EmberJS, AngularJS, BackboneJS</p>
 					<aside class="notes">
-						Notater blabla
+						<p>AngularJS er en del av flere rammeverk</p>
+						<p>Forskjellene er flere, AngularJS dekker et større område</p>
+						<p>Hentet fra blogg, forsøk på å beskrive forskjellene:</p>
+						<p>Angular = Cruiseskip, KJS = surfebrett, BJS = redningsvest</p>
 					</aside>
 				</section>
 
 				<section>
 					<h2>Model View Whatever</h2>
-					
+					<p>MV*</p>
+					<p>Blanding av MVVM og MVC</p>
 					<aside class="notes">
-						Notater blabla
+						<p>Omtrent som MVC</p>
+						<p>Blir ikke tvunget til å lage controllere</p>
+						<p>Presentasjonslag, forretningslag, modell</p>
+						<p>Diskusjonene rundt MVVM, MVP, MVC ble for mye</p>
+						<p>Controllers = MVC, Scopes = VM i MVVM</p>
 					</aside>
 				</section>
 
 				<section>
 					<h2>Scope</h2>
-					
+					<p>Applikasjonsmodell</p>
+					<p>Linker app med view</p>
 					<aside class="notes">
-						Notater blabla
+						<p>Data defineres innenfor en applikasjonsmodell</p>
+						<p>Applikasjonsmodellen kan sammenlignes med ViewModel i MVVM</p>
+						<p>Hierarkisk struktur, ala DOM</p>
+						<p>Gir en kontekst til AngularJS-uttrykk, se demo</p>
 					</aside>
 				</section>
 
 				<section>
-					<section>
 					<img src="AngularJS.svg" />
 					<h2>I praksis</h2>
-				</section>
 				</section>
 
 				<section>
@@ -110,7 +126,7 @@
 &lt;/html&gt;
 					</code></pre>
 					<aside class="notes">
-						Notater blabla
+						
 					</aside>
 				</section>
 
@@ -184,7 +200,9 @@
 					<h2>{{title}}</h2>
 					
 					<aside class="notes">
-						Notater blabla
+						<p>Instansierer et element for hver enhet i en collection</p>
+						<p>Dette elementet genereres ut fra en template</p>
+						<p>Kan brukes til å lage lister, tabeller, you name it</p>
 					</aside>
 				</section>
 
@@ -207,7 +225,11 @@
 &lt;/table&gt;
 					</code></pre>
 					<aside class="notes">
-						Vi har jukset litt, og generert et array med ordre.
+						<p>Her genereres linjene i en tabell vha. ng-repeat</p>
+						<p>For hvert element i listen "orders" vil det skrives ut en linke med ID og Navn</p>
+						<p>Orders er en samling av elementer definert i f.eks. en service eller i app.-modellen</p>
+						<p>ng-repeat gjør HTML mye mer lesbar, kjappere å skrive</p>
+						<p>Sidene blir mye mer dynamiske</p>
 					</aside>
 				</section>
 
@@ -260,21 +282,33 @@
 
 				<section>
 					<h2>i18n, l10n</h2>
-					<p>Info</p>
+					<p>i18n = internationalization</p>
+					<p>l10n = localization</p>
 					<aside class="notes">
-						i18n = internationalization
-						</br>
-						l10n = localization
-						</br>
+						<p>Forkortelser, hvor tallet står for antall tegn</p>
+						<p>Et form for Filter</p>
+						<p>Internasjonalisering betyr å opprettholde separate ressursfiler</p>
+						<p>Localization vil si å tilby oversettelser i disse ressursfilene</p>
+						<p>Dato, tid, tall, valuta, språk</p>
 						http://docs.angularjs.org/guide/i18n
 					</aside>
 				</section>
 
 				<section>
 					<h2>i18n, l10n</h2>
-					<p>Syntaks</p>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;html ng-app&gt;
+ &lt;head&gt;
+   &lt;script src=&quot;i18n/angular-locale_de-de.js&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;i18n/angular-locale_no.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;
+&lt;/html&gt;
+					</code></pre>
 					<aside class="notes">
-						Notater blabla
+						<p>Enkelt å inkludere</p>
+						<p>Har lagt til norsk og tysk</p>
+						<p>Filene inneholder en haug av språk for tidsbegrep og tallformat</p>
+						<p>Oversettelser ellers må man bidra med selv</p>
 					</aside>
 				</section>
 
