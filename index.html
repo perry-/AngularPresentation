@@ -158,9 +158,8 @@
 				</section>
 
 				<section ng-controller="bindingCtrl">
-					<h2>{{title}}</h2>
-					<img src="One_Way_Data_Binding.png"/>
-					<img src="Two_Way_Data_Binding.png"/>
+					<h1>{{title}}</h1>
+
 					<aside class="notes">
 						Tradisjonell templating på venstre side
 						</br>
@@ -202,7 +201,7 @@
 				</section>
 
 				<section ng-controller="ngRepeatCtrl">
-					<h2>{{title}}</h2>
+					<h1>{{title}}</h1>
 					
 					<aside class="notes">
 						<p>Instansierer et element for hver enhet i en collection</p>
@@ -247,8 +246,8 @@
 				</section>
 
 				<section ng-controller="filterCtrl">
-					<h2>{{title}}</h2>
-					<p>Info</p>
+					<h1>{{title}}</h1>
+
 					<aside class="notes">
 						Notater blabla
 					</aside>
@@ -326,17 +325,17 @@
 				</section>
 
 				<section>
-					<h2>Routing</h2>
-					<p>Info</p>
+					<h1>Routing</h1>
+
 					<aside class="notes">
-						Notater blabla
+
 					</aside>
 				</section>
 
 				<section>
 					<h2>Routing</h2>
 <pre><code data-trim contenteditable data-ng-non-bindable>
-var app = angular.module('NgESS', ['NgESSFilters','ngRoute']);
+var app = angular.module('NgESS', ['ngRoute']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -355,7 +354,7 @@ app.config(['$routeProvider',
   }]);
   </code></pre>
 					<aside class="notes">
-						Notater blabla
+						
 					</aside>
 				</section>
 
