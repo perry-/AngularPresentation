@@ -135,6 +135,21 @@ section .fullsize > img {
   justify-content: center;
 }
 
+.pics {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.pics img {
+	width: 20%;
+}
+
 
 
 /*********************************************

@@ -83,6 +83,18 @@
 					<aside class="notes">
 						<p>AngularJS er en del av flere rammeverk</p>
 						<p>Forskjellene er flere, AngularJS dekker et større område</p>
+						<p>Dette foredraget sammenligner ikke med disse</p>
+					</aside>
+				</section>
+					
+				<section>
+					<div class="pics">
+						<img src="knockout.jpg">
+						<img src="backbone.jpeg">
+						<img src="angularship.jpeg">
+					</div>
+					
+					<aside class="notes">
 						<p>Hentet fra blogg, forsøk på å beskrive forskjellene:</p>
 						<p>Angular = Cruiseskip, KJS = surfebrett, BJS = redningsvest</p>
 						<p>Dette foredraget sammenligner ikke med disse</p>
@@ -107,6 +119,7 @@
 					<p>Applikasjonsmodell</p>
 					<p>Linker app med view</p>
 					<aside class="notes">
+						<p>Scope er et sett med objekter som controller har tilgang til</p>
 						<p>Data defineres innenfor en applikasjonsmodell</p>
 						<p>Applikasjonsmodellen kan sammenlignes med ViewModel i MVVM</p>
 						<p>Hierarkisk struktur, ala DOM</p>
@@ -333,28 +346,10 @@
 				</section>
 
 				<section>
-					<h2>Routing</h2>
-<pre><code data-trim contenteditable data-ng-non-bindable>
-var app = angular.module('NgESS', ['ngRoute']);
+					<h1>Oppsummering</h1>
 
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/ng-repeat', {
-        templateUrl: 'partials/ngrepeat.html',
-        controller: 'orderCtrl'
-      }).
-	  when('/filter', {
-        templateUrl: 'partials/filter.html',
-        controller: 'orderCtrl'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
-  }]);
-  </code></pre>
 					<aside class="notes">
-						
+						<p>Siste demo</p>
 					</aside>
 				</section>
 
