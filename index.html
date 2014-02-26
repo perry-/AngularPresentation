@@ -39,10 +39,9 @@
 				<section>
 					<img src="AngularJS.svg" />
 					<h3>En introduksjon</h3>
+
 					<aside class="notes">
-						Foredraget er en introduksjon i grunnleggende elementer i AngularJS
-						</br>
-						Man blir ingen ekspert i AngularJS etter det
+
 					</aside>
 				</section>
 
@@ -50,10 +49,9 @@
 					<div class="fullsize">
 						<img src="Google.png">
 					</div>
+
 					<aside class="notes">
-						<p>Historikk</p>
-						<p>Startet av Google i 2009</p>
-						<p>Navnet kommer av bruken av angular brackets i HTML og at det er et JS-rammeverk</p>
+
 					</aside>
 				</section>
 
@@ -63,13 +61,9 @@
 					<p>Embeddable</p>
 					<p>Injectable</p>
 					<p>Testable</p>
+
 					<aside class="notes">
-						<p>Brukes for å lage single page applications</p>
-						<p>Web side = vanligvis informasjonskilde, lite interaksjon (ciber.no)</p>
-						<p>Web app = avhenger av interaksjon med brukere (timeføring/ESS)</p>
-						<p>Embeddable = kan legge til flere AJS apps hvor som helst i markup</p>
-						<p>Injectable = dependency injection er kjernen, utbyttbare komponenter</p>
-						<p>Testable = bygd for å være testbart, tett integrasjon med testrammeverk</p>
+
 					</aside>
 				</section>
 
@@ -81,9 +75,7 @@
 					</div>
 					
 					<aside class="notes">
-						<p>AngularJS er en del av flere rammeverk</p>
-						<p>Forskjellene er flere, AngularJS dekker et større område</p>
-						<p>Dette foredraget sammenligner ikke med disse</p>
+
 					</aside>
 				</section>
 					
@@ -95,9 +87,7 @@
 					</div>
 					
 					<aside class="notes">
-						<p>Hentet fra blogg, forsøk på å beskrive forskjellene:</p>
-						<p>Angular = Cruiseskip, KJS = surfebrett, BJS = redningsvest</p>
-						<p>Dette foredraget sammenligner ikke med disse</p>
+
 					</aside>
 				</section>
 
@@ -105,12 +95,9 @@
 					<h2>Model View Whatever</h2>
 					<p>MV*</p>
 					<p>Blanding av MVVM og MVC</p>
+
 					<aside class="notes">
-						<p>Omtrent som MVC</p>
-						<p>Blir ikke tvunget til å lage controllere</p>
-						<p>Presentasjonslag, forretningslag, modell</p>
-						<p>Diskusjonene rundt MVVM, MVP, MVC ble for mye</p>
-						<p>Controllers = MVC, Scopes = VM i MVVM</p>
+
 					</aside>
 				</section>
 
@@ -118,12 +105,9 @@
 					<h2>Scope</h2>
 					<p>Applikasjonsmodell</p>
 					<p>Linker app med view</p>
+
 					<aside class="notes">
-						<p>Scope er et sett med objekter som controller har tilgang til</p>
-						<p>Data defineres innenfor en applikasjonsmodell</p>
-						<p>Applikasjonsmodellen kan sammenlignes med ViewModel i MVVM</p>
-						<p>Hierarkisk struktur, ala DOM</p>
-						<p>Gir en kontekst til AngularJS-uttrykk, se demo</p>
+
 					</aside>
 				</section>
 
@@ -162,11 +146,7 @@
 &lt;/html&gt;
 					</code></pre>
 					<aside class="notes">
-						Legger til ng-app-attributt for å referere til en applikasjon
-						</br>
-						ng-controller refererer til en kontroller
-						</br>
-						Begge disse defineres i en javascript-fil, her i app.js
+						
 					</aside>
 				</section>
 
@@ -174,9 +154,7 @@
 					<h1>{{title}}</h1>
 
 					<aside class="notes">
-						Tradisjonell templating på venstre side
-						</br>
-						Two way binding på høyre side
+						
 					</aside>
 				</section>
 
@@ -191,7 +169,7 @@
 					<input class="numberField" type="number" ng-model="hours2">
 					= {{hours1+hours2}}
 					<aside class="notes">
-						Her har vi to eksempler på Two Way Binding.
+						
 					</aside>
 				</section>
 
@@ -207,9 +185,7 @@
 = {{numb1+numb2}}
 					</code></pre>
 					<aside class="notes">
-						Forklar ng-model, kan prefikses med "data-"
-						</br>
-						Overskriften settes ikke til input fra forrige slide, annet scope
+						
 					</aside>
 				</section>
 
@@ -217,9 +193,7 @@
 					<h1>{{title}}</h1>
 					
 					<aside class="notes">
-						<p>Instansierer et element for hver enhet i en collection</p>
-						<p>Dette elementet genereres ut fra en template</p>
-						<p>Kan brukes til å lage lister, tabeller, you name it</p>
+						
 					</aside>
 				</section>
 
@@ -242,11 +216,7 @@
 &lt;/table&gt;
 					</code></pre>
 					<aside class="notes">
-						<p>Her genereres linjene i en tabell vha. ng-repeat</p>
-						<p>For hvert element i listen "orders" vil det skrives ut en linke med ID og Navn</p>
-						<p>Orders er en samling av elementer definert i f.eks. en service eller i app.-modellen</p>
-						<p>ng-repeat gjør HTML mye mer lesbar, kjappere å skrive</p>
-						<p>Sidene blir mye mer dynamiske</p>
+						
 					</aside>
 				</section>
 
@@ -254,7 +224,7 @@
 					<h1>Demo</h1>
 
 					<aside class="notes">
-						<p>Ng-Repeat demo</p>
+						
 					</aside>
 				</section>
 
@@ -262,7 +232,7 @@
 					<h1>{{title}}</h1>
 
 					<aside class="notes">
-						Notater blabla
+						
 					</aside>
 				</section>
 
@@ -277,7 +247,7 @@
     &lt;tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-    &lt;tr data-ng-repeat=&quot;order in orders&quot; | filter:"Time off in lieu" &gt;
+    &lt;tr data-ng-repeat=&quot;order in orders | filter:'Time off in lieu'&quot;&gt;
       &lt;td&gt;{{order.ProjectId}}&lt;/td&gt;
       &lt;td&gt;{{order.ProjectName}}&lt;/td&gt;
     &lt;/tr&gt;
@@ -285,7 +255,7 @@
 &lt;/table&gt;
 					</code></pre>
 					<aside class="notes">
-						Vi har jukset litt, og generert et array med ordre.
+						
 					</aside>
 				</section>
 
@@ -293,7 +263,7 @@
 					<h1>Demo</h1>
 
 					<aside class="notes">
-						<p>Filter demo</p>
+						
 					</aside>
 				</section>
 
@@ -302,12 +272,7 @@
 					<p>i18n = internationalization</p>
 					<p>l10n = localization</p>
 					<aside class="notes">
-						<p>Forkortelser, hvor tallet står for antall tegn</p>
-						<p>Et form for Filter</p>
-						<p>Internasjonalisering betyr å opprettholde separate ressursfiler</p>
-						<p>Localization vil si å tilby oversettelser i disse ressursfilene</p>
-						<p>Dato, tid, tall, valuta, språk</p>
-						http://docs.angularjs.org/guide/i18n
+						
 					</aside>
 				</section>
 
@@ -322,10 +287,7 @@
 &lt;/html&gt;
 					</code></pre>
 					<aside class="notes">
-						<p>Enkelt å inkludere</p>
-						<p>Har lagt til norsk og tysk</p>
-						<p>Filene inneholder en haug av språk for tidsbegrep og tallformat</p>
-						<p>Oversettelser ellers må man bidra med selv</p>
+						
 					</aside>
 				</section>
 
@@ -333,7 +295,7 @@
 					<h1>Demo</h1>
 
 					<aside class="notes">
-						<p>Filter demo</p>
+						
 					</aside>
 				</section>
 
@@ -349,7 +311,7 @@
 					<h1>Oppsummering</h1>
 
 					<aside class="notes">
-						<p>Siste demo</p>
+						
 					</aside>
 				</section>
 
@@ -362,210 +324,8 @@
 						<div class="resource"><a href="http://meetup.com/AngularJS-Oslo/"><img src="meetupcom.png"/> <h5>meetup.com/AngularJS-Oslo/</h5> </a></div>
 					</div>
 				</section>
-
-				<!--
-				<section ng-controller="forEachCtrl">
-					<h2>{{title}}</h2>
-					<div ng-init="orders = [
-						        {'OrderId': 5200902, 'OrderName':'Physical treatment'},
-								{'OrderId': 5200903, 'OrderName': 'Dentist appointment'},
-								{'OrderId': 5200904, 'OrderName': 'Sick children'}]"></div>
-					
-					<table>
-					    <tr><th>ID</th><th>Beskrivelse</th></tr>
-					    <tr ng-repeat="order in orders">
-					      <td>{{order.OrderId}}</td>
-					      <td>{{order.OrderName}}</td>
-					    </tr>
-					 </table>
-
-					<aside class="notes">
-						Genererer repeterende HTML markup med for-løkke
-					</aside>
-				</section>
-
-				<section ng-controller="filterCtrl">
-					<h2>{{title}}</h2>
-					<div ng-init="orders = [
-						        {'OrderId': 5200902, 'OrderName':'Physical treatment'},
-								{'OrderId': 5200903, 'OrderName': 'Dentist appointment'},
-								{'OrderId': 5200904, 'OrderName': 'Sick children'}]"></div>
-                           
-                    Søk: <input ng-model="searchText">
-
-                    <table id="searchTextResults">
-					    <tr><th>ID</th><th>Beskrivelse</th></tr>
-					    <tr ng-repeat="order in orders | filter:searchText">
-					      <td>{{order.OrderId}}</td>
-					      <td>{{order.OrderName}}</td>
-					    </tr>
-					  </table>
-
-					<aside class="notes">
-						Notater blabla
-					</aside>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>-->
-				</section>
+				
+			</section>
 
 				
 			</div>
