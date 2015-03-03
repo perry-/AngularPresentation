@@ -36,12 +36,31 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-background="#54038E">
 					<img src="AngularJS.svg" />
 
 					<aside class="notes">
 
 					</aside>
+				</section>
+
+				<section>
+					<h2>Hva?</h2>
+					<ul>
+						<li>Open source!</li>
+						<li>SPA</li>
+						<li>MV*</li>
+						<li>Declarative</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Hvorfor?</h2>
+					<ul>
+						<li>Separation</li>
+						<li>Structure</li>
+						<li>Bindings!</li>
+					</ul>
 				</section>
 
 				<section>
@@ -65,7 +84,10 @@
 				<section>
 					<h2>Controller</h2>
 					<pre><code data-trim contenteditable data-ng-non-bindable>
+var myApp = angular.module('myApp',[]);
+myApp.controller('controllerName', ['$scope', function($scope) {
 
+}]);
 					</code></pre>
 					<aside class="notes">
 						
@@ -84,8 +106,33 @@
 				</section>
 
 				<section>
-					<h2>Scope</h2>
+					<h2>$scope</h2>
 
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+var myApp = angular.module('myApp',[]);
+myApp.controller('controllerName', ['$scope', function($scope) {
+	$scope.name = "Perry"
+}]);
+					</code></pre>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>$scope</h2>
+
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+&lt;html data-ng-app="myApp"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Eksempel&lt;/title&gt;
+    &lt;script src="/Scripts/angular.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{name}}
+  &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
 					<aside class="notes">
 
 					</aside>
@@ -124,6 +171,7 @@
 
 				<section ng-controller="ngRepeatCtrl">
 					<h1>{{title}}</h1>
+					<img src="img/ngrepeat.png"/>
 					
 					<aside class="notes">
 						
@@ -133,35 +181,27 @@
 				<section ng-controller="ngRepeatCtrl">
 					<h2>{{title}}</h2>
 					<pre><code data-trim contenteditable data-ng-non-bindable>
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Project Id&lt;/td&gt;
-      &lt;td&gt;Project Name&lt;/td&gt;
-    &lt;tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr data-ng-repeat=&quot;order in orders&quot;&gt;
-      &lt;td&gt;{{order.ProjectId}}&lt;/td&gt;
-      &lt;td&gt;{{order.ProjectName}}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <td>Employee name</td>
+      <td>Employee experience</td>
+    <tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="employee in employees">
+      <td>{{employee.name}}</td>
+      <td>{{employee.experience}}</td>
+    </tr>
+  </tbody>
+</table>
 					</code></pre>
 					<aside class="notes">
 						
 					</aside>
 				</section>
 
-				<section>
-					<h1>Demo</h1>
-
-					<aside class="notes">
-						
-					</aside>
-				</section>
-
-				<section ng-controller="filterCtrl">
+				<section ng-controller="filterCtrl" data-background="img/filter.jpg">
 					<h1>{{title}}</h1>
 
 					<aside class="notes">
@@ -172,31 +212,197 @@
 				<section ng-controller="filterCtrl">
 					<h2>{{title}}</h2>
 					<pre><code data-trim contenteditable data-ng-non-bindable>
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Project Id&lt;/td&gt;
-      &lt;td&gt;Project Name&lt;/td&gt;
-    &lt;tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr data-ng-repeat=&quot;order in orders | filter:'Time off in lieu'&quot;&gt;
-      &lt;td&gt;{{order.ProjectId}}&lt;/td&gt;
-      &lt;td&gt;{{order.ProjectName}}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <td>Employee name</td>
+      <td>Employee experience</td>
+    <tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="employee in employees">
+      <td>{{employee.name}}</td>
+      <td>{{employee.experience}}</td>
+    </tr>
+  </tbody>
+</table>
 					</code></pre>
 					<aside class="notes">
 						
 					</aside>
 				</section>
 
-				<section>			
+				<section>
 					<h1>Demo</h1>
+					<a href="http://plnkr.co/edit/K8WidZlhkdKDkQRNGEDc?p=preview" target="_blank">Click me</a>
 
 					<aside class="notes">
 						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Routing</h1>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Routing</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+myApp.config(['$routeProvider',
+  function($routeProvider, $route) {
+    $routeProvider.
+      when('/list', {
+        templateUrl: 'list.html',
+        controller: 'ListController'
+      }).
+      when('/edit/:id', {
+        templateUrl: 'edit.html',
+        controller: 'EditController'
+      }).
+      otherwise({
+        redirectTo: '/list'
+      });
+  }]);
+					</code></pre>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<a href="http://plnkr.co/edit/4CMgEWvoPLbsxnbU8q0m?p=preview" target="_blank">Click me</a>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Form validation</h1>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Form validation</h2>
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+
+					</code></pre>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<a href="http://plnkr.co/edit/ohriWJLJq6b9DPvrLS9K?p=preview" target="_blank">Click me</a>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Event handling</h1>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section  data-background="img/bubbles.jpg">
+					<h1>Event handling</h1>
+					<h2>Bubbling</h2>
+					<img style="height: 400px" src="img\bubbling.svg" />
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section  data-background="img/capturing.jpg">
+					<h1>Event handling</h1>
+					<h2>Capturing</h2>
+					<img style="height: 400px" src="img\capturing.svg" />
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<a href="http://plnkr.co/edit/LXCI1uoW7oMDjV9DqDhI?p=preview" target="_blank">Click me</a>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Custom directives</h1>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<a href="" target="_blank">Click me</a>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Digest cycle</h1>
+					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+					<a href="http://plnkr.co/edit/JLPfLhp3nBaabJFe8bBt?p=preview" target="_blank">Click me</a>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h1>Digest cycle</h1>
+					<h2>Performance</h2>
+					
+					<aside class="notes">
+Total row count: 2519 Watchers count: 15124 Scope count: 2521
+
+Version: 1.4.0-beta.5
+Digest cycle: (High+Low)/2: 12.5 ms High: 18 Low: 7
+
+Version: 1.2.0
+Digest cycle: (High+Low)/2: 36.5 ms High: 44 Low: 29
+
+Nesten 3 ganger raskere.
+					</aside>
+				</section>
+
+				<section data-background="img/decorator.jpg">
+					<h1>Decorators</h1>
+					
+					<aside class="notes">
 					</aside>
 				</section>
 
@@ -229,14 +435,6 @@
 
 					<aside class="notes">
 						
-					</aside>
-				</section>
-
-				<section>
-					<h1>Routing</h1>
-
-					<aside class="notes">
-
 					</aside>
 				</section>
 
