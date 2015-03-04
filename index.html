@@ -152,37 +152,6 @@ ng-hide
 					</aside>
 				</section>
 
-				<section ng-controller="bindingCtrl">
-					<h2>{{title}}</h2>
-					<div class="example">
-						<input class="examplecode" placeholder="Skriv inn ny tittel" ng-model="title">
-					</div>
-
-					<input class="numberField" type="number" ng-model="hours1">
-					+
-					<input class="numberField" type="number" ng-model="hours2">
-					= {{hours1+hours2}}
-					<aside class="notes">
-						
-					</aside>
-				</section>
-
-				<section ng-controller="bindingCtrl">
-					<h2>{{title}}</h2>
-					<pre><code data-trim contenteditable data-ng-non-bindable>
-&lt;h2&gt;{{title}}&lt;/h2&gt;
-&lt;input ng-model=&quot;title&quot;&gt;
-
-&lt;input type=&quot;number&quot; ng-model=&quot;numb1&quot;&gt;
-+
-&lt;input type=&quot;number&quot; ng-model=&quot;numb2&quot;&gt;
-= {{numb1+numb2}}
-					</code></pre>
-					<aside class="notes">
-						
-					</aside>
-				</section>
-
 				<section ng-controller="ngRepeatCtrl">
 					<h1>{{title}}</h1>
 					<img src="img/ngrepeat.png"/>
@@ -225,22 +194,7 @@ ng-hide
 
 				<section ng-controller="filterCtrl">
 					<h2>{{title}}</h2>
-					<pre><code data-trim contenteditable data-ng-non-bindable>
-<table>
-  <thead>
-    <tr>
-      <td>Employee name</td>
-      <td>Employee experience</td>
-    <tr>
-  </thead>
-  <tbody>
-    <tr data-ng-repeat="employee in employees">
-      <td>{{employee.name}}</td>
-      <td>{{employee.experience}}</td>
-    </tr>
-  </tbody>
-</table>
-					</code></pre>
+					<img src="img/filterscloud.png">
 					<aside class="notes">
 						
 					</aside>
@@ -522,21 +476,20 @@ promise.then(function(response) {
 
 				<section>
 					<img style="width: 1000px" src="img/ngconf.svg" />
-					<a href="http://www.meetup.com/AngularJS-Oslo/">meetup.com</a> | 
-					<a href="http://www.ng-conf.org/">ng-conf.org</a>
+					<a href="http://www.meetup.com/AngularJS-Oslo/" target="_blank">meetup.com</a> | 
+					<a href="http://www.ng-conf.org/" target="_blank">ng-conf.org</a>
 				</section>
 
 				<section>
-					<h2>Ressurser</h2>
 					<div class="resources">
-						<div class="resource"><a href="http://angularjs.org" target="_blank"><img src="angularjsorg.png"/> <h5>AngularJS.org</h5> </a></div>
-						<div class="resource"><a href="http://egghead.io" target="_blank"><img src="eggheadio.png"/> <h5>Egghead.io</h5> </a></div>
-						<div class="resource"><a href="http://perry-.github.io/AngularPresentation" target="_blank">
-					<img src="AngularJS.svg" /> <h5>perry-.github.io/AngularPresentation</h5> </a></div>
+						<div class="resource"><a href="http://angularjs.org" target="_blank"><img src="angularjsorg.png"/> <p>AngularJS.org</p></a></div>
+						<div class="resource"><a href="http://egghead.io" target="_blank"><img src="eggheadio.png"/><p>Egghead.io</p></a></div>
+						<div class="resource"><a href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro" target="_blank"><img src="img/codeschool.png" /><p>Code School</p> </a></div>
 					</div>
 				</section>
 
 				<section data-background="img/boardgame.jpg">
+						<div><a href="http://bit.ly/ciberangular" target="_blank"><h1>bit.ly/ciberangular</h1> </a></div>
 				</section>
 				
 			</section>
