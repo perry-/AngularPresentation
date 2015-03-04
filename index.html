@@ -396,12 +396,72 @@ Digest cycle: (High+Low)/2: 36.5 ms High: 44 Low: 29
 
 Nesten 3 ganger raskere.
 					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>ng-Aria</h1>
+					
+					<aside class="notes">
+
 					</aside>
 				</section>
 
 				<section data-background="img/decorator.jpg">
 					<h1>Decorators</h1>
 					
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>$log</h1>
+					<a href="http://plnkr.co/edit/4CMgEWvoPLbsxnbU8q0m?p=preview" target="_blank">plnkr</a>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h1>$q</h1>
+					
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+$scope.asyncGreet() {
+  return $q(function(resolve, reject) {
+    setTimeout(function() {
+        resolve('Hello, world!');
+    }, 1000);
+  });
+}
+
+var promise = $scope.asyncGreet();
+promise.then(function(response) {
+  alert('Success: ' + response);
+}, function(error) {
+  alert('Failed: ' + error);
+});
+					</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>$http</h1>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>$http</h1>
+					<h2>Interceptors</h2>
+					
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+
+					</code></pre>
 					<aside class="notes">
 					</aside>
 				</section>
@@ -439,7 +499,7 @@ Nesten 3 ganger raskere.
 				</section>
 
 				<section>
-					<h1>Oppsummering</h1>
+					<h1>Spørsmål?</h1>
 
 					<aside class="notes">
 						
@@ -447,12 +507,20 @@ Nesten 3 ganger raskere.
 				</section>
 
 				<section>
+					<img style="width: 1000px" src="img/ngconf.svg" />
+					<a href="http://www.meetup.com/AngularJS-Oslo/">meetup.com</a> | 
+					<a href="http://www.ng-conf.org/">ng-conf.org</a>
+				</section>
+
+				<section>
 					<h2>Ressurser</h2>
 					<div class="resources">
-						<div class="resource"><a href="http://angularjs.org"><img src="angularjsorg.png"/> <h5>AngularJS.org</h5> </a></div>
-						<div class="resource"><a href="http://egghead.io"><img src="eggheadio.png"/> <h5>Egghead.io</h5> </a></div>
-						<div class="resource"><a href="http://meetup.com/AngularJS-Oslo/"><img src="meetupcom.png"/> <h5>meetup.com/AngularJS-Oslo/</h5> </a></div>
+						<div class="resource"><a href="http://angularjs.org" target="_blank"><img src="angularjsorg.png"/> <h5>AngularJS.org</h5> </a></div>
+						<div class="resource"><a href="http://egghead.io" target="_blank"><img src="eggheadio.png"/> <h5>Egghead.io</h5> </a></div>
 					</div>
+				</section>
+
+				<section data-background="img/boardgame.jpg">
 				</section>
 				
 			</section>
