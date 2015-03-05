@@ -1,0 +1,10 @@
+<tbody>
+<tr data-ng-repeat="user in users | filter : {firstname: searchTerm}">
+  <td data-ng-bind-html="user.firstname | highlightwithclass : searchTerm : 'markyellow'"></td>
+  <td>{{user.surname}}</td>
+  <td>{{user.gender}}</td>
+  <td>{{user.company}}</td>
+  <td>{{user.balance | currency : user.currency : 0}}</td>
+  <td>{{user.registered}}</td>
+</tr>
+</tbody>

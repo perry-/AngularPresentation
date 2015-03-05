@@ -1,0 +1,21 @@
+<!--list.html-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Gender</th>
+      <th>Balance</th>
+      <th>Registered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="user in users">
+      <td><a href="#/edit/{{$index}}">{{user.firstname}}</a></td>
+      <td>{{user.surname}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.balance}}</td>
+      <td>{{user.registered}}</td>
+    </tr>
+  </tbody>
+</table>
