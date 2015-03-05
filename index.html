@@ -455,6 +455,36 @@ myApp.config(['$routeProvider',
 				</section>
 
 				<section>
+					<h1>$http</h1>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>$http</h1>
+					
+					<pre><code data-trim contenteditable data-ng-non-bindable>
+$http.get('/someUrl').
+  success(function(data) {
+		$scope.data = data;
+  }).
+  error(function(data) {
+		$log.error(data);
+  });
+					</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>$http</h1>
+					<a href="http://api.openweathermap.org/data/2.5/weather?q=Oslo,No">http://api.openweathermap.org/data/2.5/weather?q=Oslo,No</a>
+
+					<aside class="notes">
+					</aside>
+				</section>
+				<section>
 					<h1>$q</h1>
 					
 					<pre><code data-trim contenteditable data-ng-non-bindable>
@@ -476,25 +506,7 @@ promise.then(function(response) {
 					<aside class="notes">
 					</aside>
 				</section>
-
-				<section>
-					<h1>$http</h1>
-
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h1>$http</h1>
-					<h2>Interceptors</h2>
-					
-					<pre><code data-trim contenteditable data-ng-non-bindable>
-
-					</code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-
+				
 				<section>
 					<h2>i18n, l10n</h2>
 					<p>i18n = internationalization</p>
