@@ -1,0 +1,9 @@
+1 Lag et detaljbilde for ansatte
+2 Detaljbildet skal inneholde felter fra listen
+3 Bind opp detaljbildet til riktig controller
+4 Legg til knapper for save og cancel
+5 Fornavn skal lenke til detaljbildet
+6 Lag en teller for antall lagringer
+7 Vis antall lagringer i listevisning
+8 Rund av kontobalanse til nærmeste 1000 og bruk 'K' for tusen (eks. 70K)
+9 Lag et custom filter som runder ned til nærmeste 10000

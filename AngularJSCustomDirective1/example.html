@@ -1,0 +1,24 @@
+<h1>AngularJS Custom Directive</h1>
+      <input type="text" data-ng-model="searchTerm" />
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Gender</th>
+            <th>Skill</th>
+            <th>Balance</th>
+            <th>Registered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="user in users | filter : {firstname: searchTerm}">
+            <td data-ng-bind-html="user.firstname | highlightwithclass : searchTerm : 'markyellow'"></td>
+            <td>{{user.surname}}</td>
+            <td>{{user.gender}}</td>
+            <td><div data-ciber-skill="" skill-level="user.skillLevel" notify-me="alertMe(message)"></div></td>
+            <td>{{user.balance | currency : user.currency : 0}}</td>
+            <td>{{user.registered}}</td>
+          </tr>
+        </tbody>
+      </table>

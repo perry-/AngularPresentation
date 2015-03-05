@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" >
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body data-ng-controller="myCtrl">
+    <div class="container">
+      <h1>AngularJS Scope, Digest, Apply</h1>
+      <input type="text" data-ng-model="searchTerm" data-ng-model-options="{ debounce: {'default': 0} }"/> Total row count: {{users.length}}<br/>
+      (Watchers count: <b>{{myScope.watchersCount}}</b> Scope count: <b>{{myScope.count}}</b> Updated: {{lastUpdated | date: 'HH:mm:ss'}} Digest cycle: {{elapsedInMs}} ms High: {{high}} Low: {{low}})
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>Gender</td>
+            <td>Company</td>
+            <td>Balance</td>
+            <td>Registered</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="user in users | filter : {firstname: searchTerm}">
+            <td data-ng-bind-html="user.firstname | highlightwithclass : searchTerm : 'markyellow'"></td>
+            <td>{{user.surname}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.company}}</td>
+            <td>{{user.balance}}</td>
+            <td>{{user.registered}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script src="angular-locale_nb-no.js"></script>
+    <script src="app.js"></script>
+    <script src="filters.js"></script>
+  </body>
+</html>

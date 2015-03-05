@@ -1,0 +1,8 @@
+1 Få kalkulering til å fungere
+2 Lag tabell med kolonnene fornavn, firma, dato
+3 Formater dato (eks. 30.03.2015)
+4 Lag ny kolonne som inneholder initialer (eks "Dean Melone" til "DM")
+5 Sorter listen etter etternavn
+6 Fargelegg alle hunnkjønn med rosa
+7 Fjern alle ansatte yngre enn 30år
+8 Legg til kontobalanse, med bare to desimaler

@@ -1,0 +1,19 @@
+<!--edit.html-->
+<form class="form">
+    <img src="https://dl.dropboxusercontent.com/u/4607098/Icons/{{user.gender}}.png" />
+    <div class="form-group">
+      <label for="firstname">First name:</label>
+      <input id="firstname" class="form-control" type="text" data-ng-model="user.firstname">
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input id="surname" class="form-control" type="text" data-ng-model="user.surname">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input id="gender" class="form-control" type="text" data-ng-model="user.gender">
+    </div>
+    <button class="btn btn-primary" data-ng-click="save()">Save</button>
+    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+  
+</form>
