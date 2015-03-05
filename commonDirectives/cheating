@@ -1,0 +1,14 @@
+//ng-class
+<p ng-class="{pink: isPink, underline: hasUnderline, italic: isItalic}">Velg styling</p>
+<input type="checkbox" ng-model="isPink">Rosa <br>
+<input type="checkbox" ng-model="hasUnderline">Understrek <br>
+<input type="checkbox" ng-model="isItalic"> Kursiv
+<hr>
+<p ng-class="style">Skriv inn klasse</p>
+<input type="text" ng-model="style">
+<hr>
+<p ng-class="[style1, style2, style3]">Skriv inn klasser</p>
+<input ng-model="style1"><br>
+<input ng-model="style2"><br>
+<input ng-model="style3"><br>
+

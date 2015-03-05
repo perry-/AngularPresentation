@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" >
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body >
+      <div class="container" data-ng-controller="parent1">
+        <h1 data-ng-class="{active: parentActive}">Parent 1</h1> 
+        <button data-ng-click="broadcast()">Broadcast</button>
+        
+        <section data-ng-controller="child1">
+          <h2 data-ng-class="{active: childActive}">Child 1</h2>
+          <button data-ng-click="emit()">Emit</button>
+          
+        </section>
+        
+        <section data-ng-controller="child2">
+          <h2 data-ng-class="{active: childActive}">Child 2</h2>
+          
+          
+        </section>
+        
+      </div>
+      
+      <div class="container" data-ng-controller="parent2">
+        <h1 data-ng-class="{active: parentActive}">Parent 2</h1>
+        
+        <section data-ng-controller="child3">
+          <h2 data-ng-class="{active: childActive}">Child 3</h2>
+          <button data-ng-click="emit()">Emit</button>
+        </section>
+        
+      </div>
+      
+      <div class="container" data-ng-controller="root">
+        <h1>Root</h1>
+          <button data-ng-click="broadcast()">Broadcast</button>
+        
+      </div>
+  </body>
+</html>
